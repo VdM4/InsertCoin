@@ -1,0 +1,99 @@
+.body {
+    font-family: monospace;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 15%;
+    
+}
+
+h1 {
+    font-size: 65px;
+    color: black;
+}
+
+.thirdEL {
+    width: 320px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.thirdEL img {
+    width: 100%;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.imageG img {
+    width: 100%;
+}
+
+.divider {
+  height: 2px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 20px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.list {
+    padding: 20px;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
